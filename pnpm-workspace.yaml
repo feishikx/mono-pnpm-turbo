@@ -1,0 +1,6 @@
+# pnpm-workspace.yaml（根目录）
+packages:
+  - 'apps/*'    # 业务应用目录：匹配 apps 下的所有子项目
+  - 'packages/*' # 共享包目录：匹配 packages 下的所有子项目
+  - '!**/node_modules/**' # 排除 node_modules（可选，避免意外包含）
+  - '!**/dist/**'         # 排除构建产物（可选，避免意外包含）

@@ -1,0 +1,21 @@
+{
+  "$schema": "https://turbo.build/schema.json",
+  "globalDependencies": [".env", "package.json"],
+  "pipeline": {
+    "dev": {
+      "cache": false,
+      "persistent": true
+    },
+    "build": {
+      "cache": true,
+      "outputs": ["dist/**"],
+      "dependsOn": ["^build"],
+      "inputs": ["src/**", "package.json", "vite.config.js"]
+    },
+    "lint": {
+      "cache": true,
+      "outputs": [],
+      "inputs": ["src/**", "package.json", ".eslintrc.js"]
+    }
+  }
+}

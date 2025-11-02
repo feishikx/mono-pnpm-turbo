@@ -1,0 +1,21 @@
+{
+  "name": "my-monorepo",
+  "private": true,
+  "packageManager": "pnpm@10.19.0",
+  "scripts": {
+    "turbo:dev": "turbo run dev",
+    "turbo:build": "turbo run build",
+    "turbo:lint": "turbo run lint",
+    "dev:order": "pnpm turbo run dev --filter=@my-mono/ui & pnpm turbo run dev --filter=@my-mono/web",
+    "clean": "rm -rf node_modules apps/**/node_modules packages/**/node_modules && rm -rf pnpm-lock.yaml"
+  },
+  "devDependencies": {
+    "@types/node": "^20.5.0",
+    "eslint": "^9.39.0",
+    "eslint-config-prettier": "^10.1.8",
+    "eslint-plugin-react": "^7.37.5",
+    "eslint-plugin-react-hooks": "^7.0.1",
+    "prettier": "^3.6.2",
+    "turbo": "^1.10.0"
+  }
+}

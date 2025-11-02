@@ -1,0 +1,17 @@
+# 构建产物
+apps/**/dist/
+packages/**/dist/
+
+# 依赖目录
+node_modules/
+.pnp/
+.pnp.js
+
+# 缓存目录
+.turbo/
+.vite/
+
+# 环境文件
+.env
+.env.local
+.env.development.local
